@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <fieldset>
+
+<legend><strong><big> Calculadora</big</strong></legend>
+<h5>Em HTML e Java Cript básico</h5>
+<form action=""></form>
+<div>
+<label for="ini1">Número 1:</label>
+<input type="number" name="numero1" id="ini1" min="0" max="1000" required oninput="iresultado.innerHTML = (Number(ini1.value) || 0) + (Number(ini2.value) || 0)">
+ </div>
+<br>
+
+<div>
+    <label for="ini2">Número 2 :</label>
+    <input type="number" name="numero2" id="ini2"
+    min="0" max="1000" required oninput="iresultado.innerHTML = (Number(ini1.value) || 0) + (Number(ini2.value) || 0)">
+</div>
+<br>
+
+<label for="iresultado">Soma:</label>
+<output name="resultado" id="iresultado">0</output>
+<br><br>
+<button type="submit">Enviar</button>
+   <button type="reset">Excluir</button>
+
+    </fieldset>
+</form>
+<br>
+   <fieldset>
+    <legend><big><strong>Cáculo de Idade</strong></big></legend>
+    <h5>Usando HTML e Java cript básico</h5>
+<form action="" method="get" autocomplete="on"> 
+<div>
+<label for="iano">Em que ano você nasceu?</label>
+<input type="number" name="ano" id="iano" max="2020" min="1900" oninput="calcIdade()">
+</div>
+<br>
+<div>
+<label for="iidade">Sua Idade é:</label>
+<output id="iidade">0</output>
+</div>
+
+   <script>
+
+    function calcIdade(){
+let atual= new Date().getFullYear()
+iidade.innerHTML= Number(atual)-Number(iano.value)
+
+    }
+
+   </script>
+  </form> 
+
+</fieldset>
+</body>
+</html>
